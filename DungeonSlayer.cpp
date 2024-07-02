@@ -39,6 +39,7 @@ Text go_next_text;
 Text set_your_heart_text;
 Text upgrader_text;
 Text Skip_text;
+Text CutScenetext;
 Font game_font;
 
 // player attributes
@@ -593,19 +594,25 @@ void setTextures() {
     Skip_text.setFillColor(Color{ 255,215,0 });
     Skip_text.setString("Press TAB to proceed");
     Skip_text.setCharacterSize(30);
-    Skip_text.setPosition(750, 1000);
+    Skip_text.setPosition(750, 900);
+    
+    CutScenetext.setFont(game_font);
+    CutScenetext.setFillColor(Color::Black);
+    CutScenetext.setString("I shall show you true TERROR");
+    CutScenetext.setCharacterSize(40);
+    CutScenetext.setPosition(775, 420);
 
     textboxSP.setTexture(textbox);
     textboxSM.setTexture(textbox);
     textboxSP.setScale(0.7, 0.7); 
     textboxSM.setScale(0.7, 0.7);
-    textboxSP.setPosition(-100, 180);
-    textboxSM.setPosition(500, 380);
+    textboxSP.setPosition(-100, 150);
+    textboxSM.setPosition(500, 350);
     playerScene1S.setTexture(playerScene1);
     monsterScene1S.setScale(-16, 16);
-    monsterScene1S.setPosition(2000, 495);
-    playerScene1S.setScale(0.5, 0.5);
-    playerScene1S.setPosition(10, 450);
+    monsterScene1S.setPosition(2000, 465);
+    playerScene1S.setScale(0.4, 0.4);
+    playerScene1S.setPosition(100, 550);
 
 }
 
@@ -821,7 +828,7 @@ void Switch_States() {
             PlayerAttack.play();
             cooldown[3] = (9 - cooldownUp*0.5)/cooldown_divider ;
         }
-        if (Keyboard::isKeyPressed(Keyboard::Q) && cooldown[4] == 0 ) {
+        if (Mouse::isButtonPressed(Mouse::Right) && cooldown[4] == 0 ) {
             cooldown[4] = 3;
             isdashing = true;
         }
@@ -1422,11 +1429,11 @@ void cutScene() {
         cutScenePlaying = false;
 
     window.clear(); 
-    window.draw(textboxSP); 
     window.draw(textboxSM);
     window.draw(Skip_text);
     window.draw(monsterScene1S); 
     window.draw(playerScene1S); 
+    window.draw(CutScenetext); 
     window.display(); 
 
 }

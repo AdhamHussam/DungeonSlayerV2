@@ -1,6 +1,4 @@
-
 #pragma once
-
 #include "includes.h"
 
 struct GUIskill {
@@ -14,10 +12,6 @@ struct GUIskill {
 
     GUIskill() = default;
 };
-
-
-
-
 
 
 struct GUI {
