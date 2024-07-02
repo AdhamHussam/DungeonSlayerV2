@@ -53,6 +53,7 @@ void Cattack(int x, int y, int i) {
     }
     if (CmovementCounter[i] == 7) {
         CmovementCounter[i] = 0;
+        Cmonsters[i].cooldown = 0.3;
         Cstate[i] = Cenum::C_walk;
     }
 }
@@ -79,7 +80,6 @@ void Cdie(int i) {
 
 void Ccreate() {
     Ctexture.loadFromFile("enemies2/cthulu.png");
-    //Dtexture.loadFromFile("enemies/Rogue2.png");
     Coriginal.health = 150;
     Coriginal.Ct.setTexture(Ctexture);
     Coriginal.Ct.setTextureRect(CgetRect(0));
@@ -106,6 +106,7 @@ void Ctmove(float time, Sprite p, int attct, int& PlayerHealth) {
     Cdeltatime = time;
     for (int i = 0; i < CthuluNumber; i++) {
 
+        Cmonsters[i].cooldown -= Cdeltatime;
         // check if alive
         if (!Cmonsters[i].alive)
             continue;
@@ -143,7 +144,7 @@ void Ctmove(float time, Sprite p, int attct, int& PlayerHealth) {
             Churt(i);
             continue;
         }
-        else if (Cstate[i] == Cenum::C_attack) {
+        else if (Cstate[i] == Cenum::C_attack && Cmonsters[i].cooldown <= 0) {
             Cattack(x, y, i);
             continue;
         }

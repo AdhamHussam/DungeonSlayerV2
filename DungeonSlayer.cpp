@@ -56,7 +56,7 @@ float AnimationCounter = 0;
 float upgradeNPCcounter = 0;
 float tradeNPCcounter = 0;
 float PowerUpcounter = 0;
-float dash_duration = 0.075;
+float dash_duration = 0.115;
 int maximagecounter = 0;
 int ImageCounter = 0;
 int upgradeNPCImageCounter = 0;
@@ -222,11 +222,11 @@ int main()
     SetMonstersSprites();
     setTextures();
     menu_handler();
+    return 0;
 }
 
 // Definitions;
 void update() {
-    cout << Player_Health << '\n';
     if (!isDead) {
         Switch_States();
         playerMovement();
@@ -1032,7 +1032,7 @@ void menu_handler() {
             if (pagenum == -1) {
                 window.close();
                 MenuOpener.stop();
-                break;
+                return;
             }
             if (pagenum == 0) {
                 Game_play(window);
@@ -1333,7 +1333,7 @@ void dash() {
         }
         else {
             isdashing = false;
-            dash_duration = 0.075;
+            dash_duration = 0.115;
             run_speed = 200;
             walk_speed = 100;
         }

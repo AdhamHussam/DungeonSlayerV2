@@ -31,7 +31,7 @@ void SetMonstersWave() {
     SSset(ShardSoulNumber);
     BMset(BrainMoleNumber);
     Rset(RogueNumber);
-    Cset(1);
+    Cset(CthuluNumber);
 }
 
 void MoveMonsters() {
@@ -54,7 +54,7 @@ void MoveMonsters() {
     SSmove(playerdeltatime, Player, attct, Player_Health);
     BMmove(playerdeltatime, Player, attct, Player_Health);
     Ctmove(playerdeltatime, Player, attct, Player_Health);
-    room_cleared = true;
+ //   room_cleared = true;
 }
 
 void ShowMonsters() {
