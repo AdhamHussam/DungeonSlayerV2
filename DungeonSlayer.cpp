@@ -1132,6 +1132,7 @@ void PauseMenuHandler(RenderWindow& window) {
                 GameClock.restart();
                 level = 1;
                 cutScenePlaying = true;
+                coinsCount = 40;
                 Max_Player_Health = 100;
                 Map.setTexture(map1);
                 game_reset();
@@ -1146,6 +1147,7 @@ void PauseMenuHandler(RenderWindow& window) {
                 pagenum = 10;
                 level = 1;
                 cutScenePlaying = true;
+                coinsCount = 40;
                 Max_Player_Health = 100;
                 Map.setTexture(map1);
                 game_reset();
