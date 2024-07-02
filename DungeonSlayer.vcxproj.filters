@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ArcanArcher.cpp" />
+    <ClCompile Include="BOD.cpp" />
+    <ClCompile Include="BrainMole.cpp" />
+    <ClCompile Include="DungeonSlayer.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="Goblin.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Monsters.cpp" />
+    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
+    <ClCompile Include="NightBorne.cpp" />
+    <ClCompile Include="Rogue.cpp" />
+    <ClCompile Include="ShardSoul.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
+    <ClCompile Include="RandomizePlaces.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="Cthulu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArcanArcher.h" />
+    <ClInclude Include="BOD.h" />
+    <ClInclude Include="BrainMole.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="Goblin.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Monsters.h" />
+    <ClInclude Include="NightBorne.h" />
+    <ClInclude Include="PauseMenu.h" />
+    <ClInclude Include="Rogue.h" />
+    <ClInclude Include="ShardSoul.h" />
+    <ClInclude Include="Skeleton.h" />
+    <ClInclude Include="RandomizePlaces.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="cthulu.h" />
+  </ItemGroup>
+</Project>
