@@ -25,6 +25,7 @@
     <ClCompile Include="FireKnight.cpp" />
     <ClCompile Include="Ghoul.cpp" />
     <ClCompile Include="IceViking.cpp" />
+    <ClCompile Include="CrystalMauler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArcanArcher.h" />
@@ -51,5 +52,6 @@
     <ClInclude Include="FireKnight.h" />
     <ClInclude Include="Ghoul.h" />
     <ClInclude Include="IceViking.h" />
+    <ClInclude Include="CrystalMauler.h" />
   </ItemGroup>
 </Project>

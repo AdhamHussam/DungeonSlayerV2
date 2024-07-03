@@ -9,6 +9,7 @@
 #include "FireKnight.h"
 #include "Ghoul.h"
 #include "IceViking.h"
+#include "CrystalMauler.h"
 
 struct Coordinates
 {

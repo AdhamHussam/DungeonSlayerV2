@@ -63,12 +63,14 @@ void MonsterNumber() {
 	GhoulNumber = stoi(cell);
 	getline(ss, cell, ',');
 	IceVikingNumber = stoi(cell);
+	getline(ss, cell, ',');
+	CrystalMaulerNumber = stoi(cell);
 }
 
 void CheckMonsterCollisions(Sprite& Monster, float x, float y) {
 	// right
 	if(x > 0){
-		for (int i = 0; i < 25; i++)
+		for (int i = 0; i < 20; i++)
 			if (Monster.getGlobalBounds().intersects(right_borders[i].getGlobalBounds())) {
 				Monster.move(Vector2f(-x, 0));
 				return;
@@ -76,7 +78,7 @@ void CheckMonsterCollisions(Sprite& Monster, float x, float y) {
 	}
 	else{
 		//left
-		for (int i = 0; i < 25; i++)
+		for (int i = 0; i < 20; i++)
 			if (Monster.getGlobalBounds().intersects(left_borders[i].getGlobalBounds())) {
 				Monster.move(Vector2f(-x, 0));
 				return;
@@ -85,7 +87,7 @@ void CheckMonsterCollisions(Sprite& Monster, float x, float y) {
 
 	if (y < 0) {
 		// up
-		for (int i = 0; i < 24; i++)
+		for (int i = 0; i < 19; i++)
 			if (Monster.getGlobalBounds().intersects(up_borders[i].getGlobalBounds())) {
 				Monster.move(Vector2f(0, -y));
 				return;
@@ -93,7 +95,7 @@ void CheckMonsterCollisions(Sprite& Monster, float x, float y) {
 	}
 	else {
 		//down
-		for (int i = 0; i < 26; i++)
+		for (int i = 0; i < 21; i++)
 			if (Monster.getGlobalBounds().intersects(down_borders[i].getGlobalBounds())) {
 				Monster.move(Vector2f(0, -y));
 				return;

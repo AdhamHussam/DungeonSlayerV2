@@ -21,10 +21,10 @@ NPCstate upgrade_npc_state = NPCstate::npc_idle;
 NPCstate trade_npc_state = NPCstate::npc_idle;
 
 int doors = 5;
-int right_walls = 25;
-int left_walls = 25;
-int up_walls = 24;
-int down_walls = 26;
+int right_walls = 20;
+int left_walls = 20;
+int up_walls = 19;
+int down_walls = 21;
 
 // music triggers
 

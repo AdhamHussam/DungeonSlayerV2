@@ -18,7 +18,7 @@ bool room_cleared = true;
 int current_room = 0,current_wave = 0;
 int ArcaneArcherNumber, NightBroneNumber, SkeletonNumber, ShardSoulNumber, BrainMoleNumber, RogueNumber, GoblinNumber, CthuluNumber, FrostGuardianNumber, DemonNumber,FlameWizardNumber, CacodaemonNumber,FireKnightNumber,GhoulNumber;
 RenderWindow window(VideoMode(1920, 1080), "Dungeon Slayer", Style::Default);
-int BODnumber, IceVikingNumber;
+int BODnumber, IceVikingNumber, CrystalMaulerNumber;
 BringerOfDeath BODmonsters[30];
 NightBrone NBmonsters[30];
 ShardSoul SSmonsters[30];
@@ -33,6 +33,7 @@ Cacodaemon CDmonsters[30];
 FireKnight FKmonsters[30];
 Ghoul Gmonsters[30];
 IceViking IVmonsters[30];
+CrystalMauler CMmonsters[30];
 Texture BODtexture;
 bool showBODSpell[30], BODalive[30];
 Sprite Player;
@@ -81,11 +82,7 @@ RectangleShape borderR17(Vector2f({ 50,600 }));
 RectangleShape borderR18(Vector2f({ 50,600 }));
 RectangleShape borderR19(Vector2f({ 50,800 }));
 RectangleShape borderR20(Vector2f({ 50,775 }));
-RectangleShape borderR21(Vector2f({ 10,10 }));
-RectangleShape borderR22(Vector2f({ 10,10 }));
-RectangleShape borderR23(Vector2f({ 10,10 }));
-RectangleShape borderR24(Vector2f({ 10,10 }));
-RectangleShape borderR25(Vector2f({ 10,10 }));
+
 
 RectangleShape borderL1(Vector2f({ 50,1000 }));
 RectangleShape borderL2(Vector2f({ 50,200 }));
@@ -107,11 +104,7 @@ RectangleShape borderL17(Vector2f({ 50,600 }));
 RectangleShape borderL18(Vector2f({ 50,600 }));
 RectangleShape borderL19(Vector2f({ 50, 775 }));
 RectangleShape borderL20(Vector2f({ 50,800 }));
-RectangleShape borderL21(Vector2f({ 10,10 }));
-RectangleShape borderL22(Vector2f({ 10,10 }));
-RectangleShape borderL23(Vector2f({ 10,10 }));
-RectangleShape borderL24(Vector2f({ 10,10 }));
-RectangleShape borderL25(Vector2f({ 10,10 }));
+
 
 RectangleShape borderU1(Vector2f({ 700,50 }));
 RectangleShape borderU2(Vector2f({ 700,50 }));
@@ -132,11 +125,7 @@ RectangleShape borderU16(Vector2f({ 600,50 }));
 RectangleShape borderU17(Vector2f({ 600,50 }));
 RectangleShape borderU18(Vector2f({ 250,50 }));
 RectangleShape borderU19(Vector2f({ 2000,50 }));
-RectangleShape borderU20(Vector2f({ 10,10 }));
-RectangleShape borderU21(Vector2f({ 10,10 }));
-RectangleShape borderU22(Vector2f({ 10,10 }));
-RectangleShape borderU23(Vector2f({ 10,10 }));
-RectangleShape borderU24(Vector2f({ 10,10 }));
+
 
 RectangleShape borderD1(Vector2f({ 2000,50 }));
 RectangleShape borderD2(Vector2f({ 700,50 }));
@@ -159,29 +148,21 @@ RectangleShape borderD18(Vector2f({ 250,50 }));
 RectangleShape borderD19(Vector2f({ 250,50 }));
 RectangleShape borderD20(Vector2f({ 550,50 }));
 RectangleShape borderD21(Vector2f({ 550,50 }));
-RectangleShape borderD22(Vector2f({ 10,10 }));
-RectangleShape borderD23(Vector2f({ 10,10 }));
-RectangleShape borderD24(Vector2f({ 10,10 }));
-RectangleShape borderD25(Vector2f({ 10,10 }));
-RectangleShape borderD26(Vector2f({ 10,10 }));
+
 
 
 RectangleShape right_borders[] = { borderR1 , borderR2 , borderR3 , borderR4 ,borderR5, borderR6, borderR7, borderR8, borderR9, borderR10 ,
-    borderR11, borderR12 , borderR13 , borderR14 , borderR15 , borderR16 , borderR17, borderR18, borderR19 ,borderR20, borderR21 , borderR22,
-    borderR23, borderR24 , borderR25
+    borderR11, borderR12 , borderR13 , borderR14 , borderR15 , borderR16 , borderR17, borderR18, borderR19 ,borderR20
 };
 
 RectangleShape left_borders[] = { borderL1,borderL2 , borderL3 , borderL4, borderL5 , borderL6 , borderL7, borderL8, borderL9, borderL10,
-    borderL11 , borderL12 , borderL13 , borderL14 , borderL15 , borderL16 ,borderL17, borderL18, borderL19 , borderL20, borderL21, borderL22,
-    borderL23 ,borderL24 , borderL25
+    borderL11 , borderL12 , borderL13 , borderL14 , borderL15 , borderL16 ,borderL17, borderL18, borderL19 , borderL20
 };
 
 RectangleShape up_borders[] = { borderU1, borderU2 , borderU3 , borderU4, borderU5, borderU6, borderU7, borderU8, borderU9, borderU10,
-    borderU11,borderU12 ,borderU13, borderU14 , borderU15 , borderU16, borderU17, borderU18, borderU19,borderU20 , borderU21, borderU22,
-    borderU23 , borderU24
+    borderU11,borderU12 ,borderU13, borderU14 , borderU15 , borderU16, borderU17, borderU18, borderU19
 };
 
 RectangleShape down_borders[] = { borderD1,borderD2, borderD3 , borderD4, borderD5, borderD6, borderD7, borderD8, borderD9 ,borderD10,
-    borderD11 , borderD12 , borderD13 , borderD14 , borderD15 , borderD16, borderD17, borderD18 , borderD19 ,borderD20, borderD21 ,
-    borderD22 , borderD23, borderD24 , borderD25 , borderD26
+    borderD11 , borderD12 , borderD13 , borderD14 , borderD15 , borderD16, borderD17, borderD18 , borderD19 ,borderD20, borderD21 
 };

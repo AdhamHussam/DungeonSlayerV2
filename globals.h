@@ -11,6 +11,7 @@
 #include "FireKnight.h"
 #include "Ghoul.h"
 #include "IceViking.h"
+#include "CrystalMauler.h"
 
 #ifndef GLOBALS_H
 #define GLOBALS_H
@@ -30,7 +31,7 @@ extern RenderWindow window;
 /*
 
 */
-extern int current_room,current_wave,BODnumber, IceVikingNumber;
+extern int current_room,current_wave,BODnumber, IceVikingNumber, CrystalMaulerNumber;
 extern Sprite Player;
 extern float playerdeltatime;
 enum state;
@@ -45,7 +46,7 @@ extern float damageUp;
 extern float AblazeDuration;
 extern int damageUpCost;
 extern float attackUpCof;
-extern float healthUp;
+extern float healthUp;	
 extern int healthUpCost;
 extern int fireUltFrame;
 extern int cooldownUpCost;
@@ -63,6 +64,7 @@ extern Cacodaemon CDmonsters[30];
 extern FireKnight FKmonsters[30];
 extern Ghoul Gmonsters[30];
 extern IceViking IVmonsters[30];
+extern CrystalMauler CMmonsters[30];
 extern GUI gui;
 
 extern RectangleShape borderR1;
@@ -85,11 +87,7 @@ extern RectangleShape borderR17;
 extern RectangleShape borderR18;
 extern RectangleShape borderR19;
 extern RectangleShape borderR20;
-extern RectangleShape borderR21;
-extern RectangleShape borderR22;
-extern RectangleShape borderR23;
-extern RectangleShape borderR24;
-extern RectangleShape borderR25;
+
 
 extern RectangleShape borderL1;
 extern RectangleShape borderL2;
@@ -111,11 +109,7 @@ extern RectangleShape borderL17;
 extern RectangleShape borderL18;
 extern RectangleShape borderL19;
 extern RectangleShape borderL20;
-extern RectangleShape borderL21;
-extern RectangleShape borderL22;
-extern RectangleShape borderL23;
-extern RectangleShape borderL24;
-extern RectangleShape borderL25;
+
 
 extern RectangleShape borderU1;
 extern RectangleShape borderU2;
@@ -136,11 +130,7 @@ extern RectangleShape borderU16;
 extern RectangleShape borderU17;
 extern RectangleShape borderU18;
 extern RectangleShape borderU19;
-extern RectangleShape borderU20;
-extern RectangleShape borderU21;
-extern RectangleShape borderU22;
-extern RectangleShape borderU23;
-extern RectangleShape borderU24;
+
 
 extern RectangleShape borderD1;
 extern RectangleShape borderD2;
@@ -163,13 +153,6 @@ extern RectangleShape borderD18;
 extern RectangleShape borderD19;
 extern RectangleShape borderD20;
 extern RectangleShape borderD21;
-extern RectangleShape borderD22;
-extern RectangleShape borderD23;
-extern RectangleShape borderD24;
-extern RectangleShape borderD25;
-extern RectangleShape borderD26;
-
-
 
 extern RectangleShape right_borders[];
 
