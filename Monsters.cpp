@@ -61,6 +61,8 @@ void MoveMonsters() {
         attct = round((damageUp * attackUpCof + 1) * 5);
     else if (curr_state == player_vmove)
         attct = round((damageUp * attackUpCof + 1) * 10);
+    else if (is1 && (fireUltFrame == 3 || fireUltFrame == 4))
+        attct = round((damageUp * attackUpCof + 1) * 1);
     room_cleared = true;
 	MonstersMovment();
     Rmove(playerdeltatime, Player, attct, Player_Health);

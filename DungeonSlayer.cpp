@@ -915,6 +915,7 @@ void Switch_States() {
     if (power_up) {
         Powerup.setTexture(powerup[PowerUpImageCounter]); powerupAnimation(0.15);
     }
+    if (Ablaze)is1 = true;
 }
 
 void UpdateAnimationCounter(float st) {
