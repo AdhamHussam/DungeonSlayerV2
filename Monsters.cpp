@@ -21,6 +21,7 @@ void SetMonstersSprites() {
     Ccreate();
     FGcreate();
     Dcreate();
+    FWcreate();
 
 }
 
@@ -37,6 +38,7 @@ void SetMonstersWave() {
     Cset(CthuluNumber);
     FGset(FrostGuardianNumber);
     Dset(DemonNumber);
+    FWset(FlameWizardNumber);
 }
 
 void MoveMonsters() {
@@ -61,7 +63,8 @@ void MoveMonsters() {
     Ctmove(playerdeltatime, Player, attct, Player_Health);
     FGmove(playerdeltatime, Player, attct, Player_Health);
     Dmove(playerdeltatime, Player, attct, Player_Health);
-  //  room_cleared = true;
+    FWmove(playerdeltatime, Player, attct, Player_Health);
+    room_cleared = true;
 }
 
 void ShowMonsters() {
@@ -82,6 +85,7 @@ void ShowMonsters() {
     Cdraw(window);
     FGdraw(window);
     Ddraw(window);
+    FWdraw(window);
 }
 
 void ResetMonsters() {
@@ -96,4 +100,5 @@ void ResetMonsters() {
     CthuluNumber = 0;
     FrostGuardianNumber = 0;
     DemonNumber = 0;
+    FlameWizardNumber = 0;
 }

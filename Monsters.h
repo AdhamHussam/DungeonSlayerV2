@@ -4,6 +4,7 @@
 #include "NightBorne.h"
 #include "Goblin.h"
 #include "cthulu.h"
+#include "FlameWizard.h"
 
 struct Coordinates
 {
