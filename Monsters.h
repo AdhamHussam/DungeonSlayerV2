@@ -7,6 +7,8 @@
 #include "FlameWizard.h"
 #include "Cacodaemon.h"
 #include "FireKnight.h"
+#include "Ghoul.h"
+#include "IceViking.h"
 
 struct Coordinates
 {

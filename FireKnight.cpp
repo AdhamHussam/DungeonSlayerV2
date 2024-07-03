@@ -34,7 +34,7 @@ void FKwalk(int i) {
     float magnitude = sqrt(Direction.x * Direction.x + Direction.y * Direction.y);
     Vector2f norm_direction = Direction / magnitude;
     FKmonsters[i].FK.move(Vector2f(norm_direction.x * FKmonsters[i].speed * FKdeltatime, norm_direction.y * FKmonsters[i].speed * FKdeltatime));
-    //CheckMonsterCollisions(FKmonsters[i].FK, norm_direction.x * FKmonsters[i].speed * FKdeltatime, norm_direction.y * FKmonsters[i].speed * FKdeltatime);
+    CheckMonsterCollisions(FKmonsters[i].FK, norm_direction.x * FKmonsters[i].speed * FKdeltatime, norm_direction.y * FKmonsters[i].speed * FKdeltatime);
     FKupdateMonFKterAnimationCounter(i);
     FKmovmentCounter[i] %= 8;
 }

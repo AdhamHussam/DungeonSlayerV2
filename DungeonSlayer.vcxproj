@@ -148,8 +148,10 @@
     <ClCompile Include="FlameWizard.cpp" />
     <ClCompile Include="FrostGuardian.cpp" />
     <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="Ghoul.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="IceViking.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Monsters.cpp" />
     <ClCompile Include="globals.cpp" />
@@ -171,9 +173,11 @@
     <ClInclude Include="FlameWizard.h" />
     <ClInclude Include="FrostGuardian.h" />
     <ClInclude Include="GameOver.h" />
+    <ClInclude Include="Ghoul.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="GUI.h" />
+    <ClInclude Include="IceViking.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Monsters.h" />

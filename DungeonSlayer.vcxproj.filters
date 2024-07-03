@@ -23,6 +23,8 @@
     <ClCompile Include="FlameWizard.cpp" />
     <ClCompile Include="Cacodaemon.cpp" />
     <ClCompile Include="FireKnight.cpp" />
+    <ClCompile Include="Ghoul.cpp" />
+    <ClCompile Include="IceViking.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArcanArcher.h" />
@@ -47,5 +49,7 @@
     <ClInclude Include="FlameWizard.h" />
     <ClInclude Include="Cacodaemon.h" />
     <ClInclude Include="FireKnight.h" />
+    <ClInclude Include="Ghoul.h" />
+    <ClInclude Include="IceViking.h" />
   </ItemGroup>
 </Project>

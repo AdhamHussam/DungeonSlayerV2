@@ -24,6 +24,8 @@ void SetMonstersSprites() {
     FWcreate();
     CDcreate();
     FKcreate();
+    Gcreate();
+    IVcreate();
 
 }
 
@@ -43,6 +45,8 @@ void SetMonstersWave() {
     FWset(FlameWizardNumber);
     CDset(CacodaemonNumber);
     FKset(FireKnightNumber);
+    Gset(GhoulNumber);
+    IVset(IceVikingNumber);
 }
 
 void MoveMonsters() {
@@ -70,6 +74,8 @@ void MoveMonsters() {
     FWmove(playerdeltatime, Player, attct, Player_Health);
     CDmove(playerdeltatime, Player, attct, Player_Health);
     FKmove(playerdeltatime, Player, attct, Player_Health);
+    Gmove(playerdeltatime, Player, attct, Player_Health);
+    IVmove(playerdeltatime, Player, attct, Player_Health);
     room_cleared = true;
 }
 
@@ -94,6 +100,8 @@ void ShowMonsters() {
     FWdraw(window);
     CDdraw(window);
     FKdraw(window);
+    Gdraw(window);
+    IVdraw(window);
 }
 
 void ResetMonsters() {
@@ -111,4 +119,6 @@ void ResetMonsters() {
     FlameWizardNumber = 0;
     CacodaemonNumber = 0;
     FireKnightNumber = 0;
+    GhoulNumber = 0;
+    IceVikingNumber = 0;
 }

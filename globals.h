@@ -9,6 +9,8 @@
 #include "FlameWizard.h"
 #include "Cacodaemon.h"
 #include "FireKnight.h"
+#include "Ghoul.h"
+#include "IceViking.h"
 
 #ifndef GLOBALS_H
 #define GLOBALS_H
@@ -21,14 +23,14 @@ extern View view;
 extern int level;
 extern int AblazeCharge;
 extern bool room_cleared;
-extern int ArcaneArcherNumber, NightBroneNumber, SkeletonNumber, ShardSoulNumber, BrainMoleNumber, RogueNumber, GoblinNumber, CthuluNumber, FrostGuardianNumber, DemonNumber, FlameWizardNumber, CacodaemonNumber, FireKnightNumber;
+extern int ArcaneArcherNumber, NightBroneNumber, SkeletonNumber, ShardSoulNumber, BrainMoleNumber, RogueNumber, GoblinNumber, CthuluNumber, FrostGuardianNumber, DemonNumber, FlameWizardNumber, CacodaemonNumber, FireKnightNumber,GhoulNumber;
 extern bool Ablaze;
 extern bool AblazeReady;
 extern RenderWindow window;
 /*
 
 */
-extern int current_room,current_wave,BODnumber;
+extern int current_room,current_wave,BODnumber, IceVikingNumber;
 extern Sprite Player;
 extern float playerdeltatime;
 enum state;
@@ -59,6 +61,8 @@ extern Demon Dmonsters[5];
 extern FlameWizard FWmonsters[30];
 extern Cacodaemon CDmonsters[30];
 extern FireKnight FKmonsters[30];
+extern Ghoul Gmonsters[30];
+extern IceViking IVmonsters[30];
 extern GUI gui;
 
 extern RectangleShape borderR1;
