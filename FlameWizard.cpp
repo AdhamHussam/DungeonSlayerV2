@@ -44,7 +44,7 @@ void FWattack(int x, int y, int i) {
     int initial = FWmovmentCounter[i];
     FWupdateMonFWterAnimationCounter(i);
     if (FWmovmentCounter[i] == 3 && FWmovmentCounter[i] > initial) {
-        if (abs(x) < 100 && abs(y) < 30) {
+        if (abs(x) < 150 && abs(y) < 30) {
             Player_Health -= 5;
             ishit = true;
         }
@@ -78,7 +78,7 @@ void FWcreate() {
     FWoriginal.FW.setTexture(FWtexture);
     FWoriginal.FW.setTextureRect(FWgetRect(0));
     FWoriginal.FW.setOrigin(75, 75);
-    FWoriginal.FW.setScale(2, 2);
+    FWoriginal.FW.setScale(3, 3);
 }
 
 void FWset(int FWn) {
@@ -139,7 +139,7 @@ void FWmove(float time, Sprite p, int attct, int& PlayerHealth) {
         }
 
         // make deciFWion
-        if (abs(x) < 100 && abs(y) < 30) {
+        if (abs(x) < 150 && abs(y) < 30) {
             FWmovmentCounter[i] = 0;
             FWtate[i] = FWenum::FW_attack;
             FWattack(x, y, i);

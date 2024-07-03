@@ -5,6 +5,7 @@
 #include "Goblin.h"
 #include "cthulu.h"
 #include "FlameWizard.h"
+#include "Cacodaemon.h"
 
 struct Coordinates
 {

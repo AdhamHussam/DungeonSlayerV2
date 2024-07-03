@@ -55,6 +55,8 @@ void MonsterNumber() {
 	DemonNumber = stoi(cell);
 	getline(ss, cell, ',');
 	FlameWizardNumber = stoi(cell);
+	getline(ss, cell, ',');
+	CacodaemonNumber = stoi(cell);
 }
 
 void CheckMonsterCollisions(Sprite& Monster, float x, float y) {

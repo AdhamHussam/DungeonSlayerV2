@@ -21,6 +21,7 @@
     <ClCompile Include="FrostGuardian.cpp" />
     <ClCompile Include="Demon.cpp" />
     <ClCompile Include="FlameWizard.cpp" />
+    <ClCompile Include="Cacodaemon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArcanArcher.h" />
@@ -43,5 +44,6 @@
     <ClInclude Include="FrostGuardian.h" />
     <ClInclude Include="Demon.h" />
     <ClInclude Include="FlameWizard.h" />
+    <ClInclude Include="Cacodaemon.h" />
   </ItemGroup>
 </Project>

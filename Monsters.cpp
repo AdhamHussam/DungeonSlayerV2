@@ -10,7 +10,7 @@
 #include "RandomizePlaces.h"
 
 void SetMonstersSprites() {
-	CreateMonsters();
+    CreateMonsters();
     AACreate();
     NBcreate();
     create_goblins();
@@ -22,6 +22,7 @@ void SetMonstersSprites() {
     FGcreate();
     Dcreate();
     FWcreate();
+    CDcreate();
 
 }
 
@@ -39,6 +40,7 @@ void SetMonstersWave() {
     FGset(FrostGuardianNumber);
     Dset(DemonNumber);
     FWset(FlameWizardNumber);
+    CDset(CacodaemonNumber);
 }
 
 void MoveMonsters() {
@@ -64,6 +66,7 @@ void MoveMonsters() {
     FGmove(playerdeltatime, Player, attct, Player_Health);
     Dmove(playerdeltatime, Player, attct, Player_Health);
     FWmove(playerdeltatime, Player, attct, Player_Health);
+    CDmove(playerdeltatime, Player, attct, Player_Health);
     room_cleared = true;
 }
 
@@ -86,6 +89,7 @@ void ShowMonsters() {
     FGdraw(window);
     Ddraw(window);
     FWdraw(window);
+    CDdraw(window);
 }
 
 void ResetMonsters() {
@@ -101,4 +105,5 @@ void ResetMonsters() {
     FrostGuardianNumber = 0;
     DemonNumber = 0;
     FlameWizardNumber = 0;
+    CacodaemonNumber = 0;
 }

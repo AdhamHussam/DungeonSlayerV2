@@ -140,6 +140,7 @@
     <ClCompile Include="ArcanArcher.cpp" />
     <ClCompile Include="BOD.cpp" />
     <ClCompile Include="BrainMole.cpp" />
+    <ClCompile Include="Cacodaemon.cpp" />
     <ClCompile Include="Cthulu.cpp" />
     <ClCompile Include="Demon.cpp" />
     <ClCompile Include="DungeonSlayer.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="ArcanArcher.h" />
     <ClInclude Include="BOD.h" />
     <ClInclude Include="BrainMole.h" />
+    <ClInclude Include="Cacodaemon.h" />
     <ClInclude Include="cthulu.h" />
     <ClInclude Include="Demon.h" />
     <ClInclude Include="FlameWizard.h" />
