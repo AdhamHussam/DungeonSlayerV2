@@ -153,6 +153,10 @@ void MonstersMovment() {
                 MovmentCounter[i] = 0;
                 BODstate[i] = BOD::BODhurt;
             }
+            else if (is1 && (fireUltFrame == 3 || fireUltFrame == 4))
+                BODmonsters[i].health -= round((damageUp * attackUpCof + 1) * 3);
+            MovmentCounter[i] = 0;
+            BODstate[i] = BOD::BODhurt;
         }
 
         // check if BOD is doing somthing

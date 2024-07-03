@@ -8,7 +8,7 @@
 int globalInt = 0;  // Definition
 Clock GameClock;
 View view(Vector2f(0, 0), Vector2f(1920, 1080));
-
+bool is1 = false;
 int level = 1;
 int AblazeCharge = 0;
 float AblazeDuration = 25;

@@ -26,6 +26,7 @@ extern bool room_cleared;
 extern int ArcaneArcherNumber, NightBroneNumber, SkeletonNumber, ShardSoulNumber, BrainMoleNumber, RogueNumber, GoblinNumber, CthuluNumber, FrostGuardianNumber, DemonNumber, FlameWizardNumber, CacodaemonNumber, FireKnightNumber,GhoulNumber;
 extern bool Ablaze;
 extern bool AblazeReady;
+extern bool is1;
 extern RenderWindow window;
 /*
 
