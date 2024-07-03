@@ -1409,14 +1409,15 @@ void set_your_heart_ablaze() {
 }
 
 void camera_shake() {
-
-    if (power_up) {
+    if (power_up)intensity = 35;
+    if (fireUltFrame == 4  or power_up) {
         float angle = static_cast<float>(rand()) / RAND_MAX * 2 * 3.14159f;
         float offsetX = cos(angle) * intensity;
         float offsetY = sin(angle) * intensity;
         view.move(offsetX, offsetY);
-        intensity *= 0.9f; // Damping effect  
+        intensity *= 0.8f; // Damping effect  
     }
+    else if (fireUltFrame == 3)intensity = 15;
 }
 void cutScene() {
     if (cutscene.getElapsedTime().asSeconds() > 0.2) { 

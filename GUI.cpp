@@ -284,7 +284,7 @@ void GUI::updatePlayerInfo(RenderWindow& window) {
 	ultBar.setPosition(ultPosition.x, ultPosition.y + 30);
 
 	if(!Ablaze)ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y*AblazeCharge/100.0));
-	else ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y * AblazeDuration / 25));
+	else ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y * AblazeDuration / 25.0));
 
 	coins.setPosition(coinsPosition.x-180, coinsPosition.y+20);
 	coins.setScale(0.6, 0.6);
@@ -298,7 +298,6 @@ void GUI::updatePlayerInfo(RenderWindow& window) {
 
 Clock fireUltTimer;
 float fireUltLag = 1.0 / 12;
-int fireUltFrame=0;
 void GUI::drawUltEffect() {
 	if (Ablaze and fireUltTimer.getElapsedTime().asSeconds() > fireUltLag) {
 		

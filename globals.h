@@ -42,6 +42,7 @@ extern int damageUpCost;
 extern float attackUpCof;
 extern float healthUp;
 extern int healthUpCost;
+extern int fireUltFrame;
 extern int cooldownUpCost;
 extern float cooldownUp;
 extern float coinsCount;
