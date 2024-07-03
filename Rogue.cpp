@@ -3,7 +3,7 @@
 #include "Skeleton.h"
 #include "RandomizePlaces.h"
 
-Texture Rtexture,Dtexture;
+Texture Rtexture,D2texture;
 Rogue Roriginal, Rmonsters[30];
 int RmovmentCounter[30];
 float RmonsterCounter[30], Rdeltatime;
@@ -106,8 +106,8 @@ void dash(int i) {
 
 void Rcreate() {
     Rtexture.loadFromFile("enemies/Rogue.png");
-    Dtexture.loadFromFile("enemies/Rogue2.png");
-    Roriginal.health = 200;
+    D2texture.loadFromFile("enemies/Rogue2.png");
+    Roriginal.health = 350;
     Roriginal.R.setTexture(Rtexture);
     Roriginal.R.setTextureRect(RgetRect(0));
     Roriginal.R.setOrigin(26, 23);
@@ -140,7 +140,7 @@ void Rmove(float time, Sprite p, int attct, int& PlayerHealth) {
         room_cleared = false;
         // check if R will die
         if (Rmonsters[i].health <= 0 && Rstate[i] != Renum::R_die) {
-            Rmonsters[i].R.setTexture(Dtexture);
+            Rmonsters[i].R.setTexture(D2texture);
             RmovmentCounter[i] = 0;
             Rstate[i] = Renum::R_die;
         }
@@ -216,7 +216,7 @@ void Rdraw(RenderWindow& window) {
     for (int i = 0; i < RogueNumber; i++) {
         if (Rmonsters[i].alive) {
             window.draw(Rmonsters[i].R);
-            gui.drawBossHP(Rmonsters[i].health, 200);
+            gui.drawBossHP(Rmonsters[i].health, 350);
         }
     }
 }

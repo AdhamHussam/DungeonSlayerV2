@@ -6,6 +6,7 @@
 #include "BrainMole.h"
 #include "Rogue.h"
 #include "cthulu.h"
+#include "Demon.h"
 #include "RandomizePlaces.h"
 
 void SetMonstersSprites() {
@@ -18,6 +19,8 @@ void SetMonstersSprites() {
     BMcreate();
     Rcreate();
     Ccreate();
+    FGcreate();
+    Dcreate();
 
 }
 
@@ -32,6 +35,8 @@ void SetMonstersWave() {
     BMset(BrainMoleNumber);
     Rset(RogueNumber);
     Cset(CthuluNumber);
+    FGset(FrostGuardianNumber);
+    Dset(DemonNumber);
 }
 
 void MoveMonsters() {
@@ -54,7 +59,9 @@ void MoveMonsters() {
     SSmove(playerdeltatime, Player, attct, Player_Health);
     BMmove(playerdeltatime, Player, attct, Player_Health);
     Ctmove(playerdeltatime, Player, attct, Player_Health);
- //   room_cleared = true;
+    FGmove(playerdeltatime, Player, attct, Player_Health);
+    Dmove(playerdeltatime, Player, attct, Player_Health);
+  //  room_cleared = true;
 }
 
 void ShowMonsters() {
@@ -73,6 +80,8 @@ void ShowMonsters() {
     NBdraw(window);
     Rdraw(window);
     Cdraw(window);
+    FGdraw(window);
+    Ddraw(window);
 }
 
 void ResetMonsters() {
@@ -85,4 +94,6 @@ void ResetMonsters() {
     RogueNumber = 0;
     GoblinNumber = 0;
     CthuluNumber = 0;
+    FrostGuardianNumber = 0;
+    DemonNumber = 0;
 }

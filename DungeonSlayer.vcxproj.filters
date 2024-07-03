@@ -18,6 +18,8 @@
     <ClCompile Include="RandomizePlaces.cpp" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="Cthulu.cpp" />
+    <ClCompile Include="FrostGuardian.cpp" />
+    <ClCompile Include="Demon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArcanArcher.h" />
@@ -37,5 +39,7 @@
     <ClInclude Include="RandomizePlaces.h" />
     <ClInclude Include="GUI.h" />
     <ClInclude Include="cthulu.h" />
+    <ClInclude Include="FrostGuardian.h" />
+    <ClInclude Include="Demon.h" />
   </ItemGroup>
 </Project>

@@ -141,7 +141,9 @@
     <ClCompile Include="BOD.cpp" />
     <ClCompile Include="BrainMole.cpp" />
     <ClCompile Include="Cthulu.cpp" />
+    <ClCompile Include="Demon.cpp" />
     <ClCompile Include="DungeonSlayer.cpp" />
+    <ClCompile Include="FrostGuardian.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="GUI.cpp" />
@@ -160,6 +162,8 @@
     <ClInclude Include="BOD.h" />
     <ClInclude Include="BrainMole.h" />
     <ClInclude Include="cthulu.h" />
+    <ClInclude Include="Demon.h" />
+    <ClInclude Include="FrostGuardian.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="Goblin.h" />

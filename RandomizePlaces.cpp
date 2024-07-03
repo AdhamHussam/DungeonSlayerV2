@@ -49,6 +49,10 @@ void MonsterNumber() {
 	GoblinNumber = stoi(cell);
 	getline(ss, cell, ',');
 	CthuluNumber = stoi(cell);
+	getline(ss, cell, ',');
+	FrostGuardianNumber = stoi(cell);
+	getline(ss, cell, ',');
+	DemonNumber = stoi(cell);
 }
 
 void CheckMonsterCollisions(Sprite& Monster, float x, float y) {

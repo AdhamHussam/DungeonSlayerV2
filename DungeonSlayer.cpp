@@ -1380,6 +1380,9 @@ void check_ablaze() {
 void set_your_heart_ablaze() {
 
     if (AblazeReady and Keyboard::isKeyPressed(Keyboard::G)) {
+        for (int i = 0; i < 5; i++) {
+            cooldown[i] = 0;
+        }
         power_up = true;
         AblazeReady = false;
         Ablaze = true;

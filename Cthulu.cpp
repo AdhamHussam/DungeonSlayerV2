@@ -80,7 +80,7 @@ void Cdie(int i) {
 
 void Ccreate() {
     Ctexture.loadFromFile("enemies2/cthulu.png");
-    Coriginal.health = 150;
+    Coriginal.health = 200;
     Coriginal.Ct.setTexture(Ctexture);
     Coriginal.Ct.setTextureRect(CgetRect(0));
     Coriginal.Ct.setOrigin(96, 56);
@@ -164,7 +164,7 @@ void Cdraw(RenderWindow& window) {
     for (int i = 0; i < CthuluNumber; i++) {
         if (Cmonsters[i].alive) {
             window.draw(Cmonsters[i].Ct);
-            gui.drawBossHP(Cmonsters[i].health, 150);
+            gui.drawBossHP(Cmonsters[i].health, 200);
         }
     }
 }
