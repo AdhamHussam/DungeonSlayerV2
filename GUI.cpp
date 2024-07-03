@@ -114,7 +114,7 @@ void GUI::setPlayerInfoTexture() {
 	loadingEffect.setTexture(loadingEffectTexture);
 	loadingEffect.setScale(3.15,3.15);
 	
-	coinsTexture.loadFromFile(R"(Materials\minerals\Transperent\Icon34.png)");
+	coinsTexture.loadFromFile(R"(Materials\items\Coins6mat\Coins6mat\coin53.png)");
 	coins.setTexture(coinsTexture);
 	coinsBackTexture.loadFromFile(R"(GUI\coins_back.png)");
 	coinsBack.setTexture(coinsBackTexture);
@@ -161,15 +161,20 @@ void GUI::drawUpgradeMenu()
 	upCo.setTexture(upCoTexture);
 	upCo.setScale(6, 4);
 	upCo.setPosition(firstPosition.x, firstPosition.y + 140);
-	firstPosition.x -= 470;
+
+	firstPosition.x -= 150;
 
 	upHeT.setPosition(firstPosition);
 	upAtT.setPosition(firstPosition.x, firstPosition.y - 140);
 	upCoT.setPosition(firstPosition.x, firstPosition.y + 140);
 
-	upHeT.setString("Health       " + to_string(healthUpCost) + "%    " + to_string((int)healthUp * 20) + "%");
-	upAtT.setString("Attack         " + to_string(damageUpCost) + "$   " + to_string((int)damageUp * 10) + "%");
-	upCoT.setString("cooldown  " + to_string(cooldownUpCost) + "$   " + to_string((int)cooldownUp * 5) + "% - " + to_string((int)cooldownUp * 3) + "%");
+	upHeT.setFillColor(Color{ 70,30,0 });
+	upAtT.setFillColor(Color{ 70,30,0 });
+	upCoT.setFillColor(Color{ 70,30,0 });
+
+	upHeT.setString(to_string(healthUpCost));
+	upAtT.setString(to_string(damageUpCost));
+	upCoT.setString(to_string(cooldownUpCost));
 
 	window.draw(upHe);
 	window.draw(upAt);
@@ -279,12 +284,12 @@ void GUI::updatePlayerInfo(RenderWindow& window) {
 	ultBar.setPosition(ultPosition.x, ultPosition.y + 30);
 	ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y*AblazeCharge/100.0));
 
-	coins.setPosition(coinsPosition.x-coinsTexture.getSize().x*2-40, coinsPosition.y + coinsTexture.getSize().y*2);
-	coins.setScale(2, 2);
+	coins.setPosition(coinsPosition.x-180, coinsPosition.y+20);
+	coins.setScale(0.6, 0.6);
 	coinsBack.setPosition(coinsPosition.x - coinsBackTexture.getSize().x * 7-20, coinsPosition.y + coinsBackTexture.getSize().y * 4);
 	coinsBack.setScale(7, 7);
 	coinsCnt.setString(to_string((int)coinsCount));
-	coinsCnt.setPosition(coinsPosition.x - 250, coinsPosition.y + 80);
+	coinsCnt.setPosition(coinsPosition.x - 270, coinsPosition.y + 80);
 	coinsCnt.setCharacterSize(30);
 
 }
