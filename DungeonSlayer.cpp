@@ -74,7 +74,7 @@ bool finishedanimationonce = false;
 bool power_up = false;
 bool shopOpened = false;
 bool shopNear = false;
-bool cutScenePlaying = true;
+bool cutScenePlaying = false;
 
 
 Menu menu(1920, 1080);
@@ -974,7 +974,6 @@ void menu_handler() {
     while (true) {
         if (pagenum == 10)
         {
-            cutScene();
             while (window.isOpen())
             {
                 Event event;
@@ -1035,6 +1034,7 @@ void menu_handler() {
                 return;
             }
             if (pagenum == 0) {
+                cutScenePlaying = true;
                 Game_play(window);
             }
             if (pagenum == 1) {
