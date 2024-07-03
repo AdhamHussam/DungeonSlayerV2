@@ -37,6 +37,7 @@ struct GUI {
     Texture upAtTexture;
     Texture upHeTexture;
     Texture upCoTexture;
+    Texture fireUltTexture;
 
     GUIskill skills[4];
     
@@ -57,9 +58,11 @@ struct GUI {
     Sprite upHe;
     Sprite upCo;
     Sprite upAt;
+    Sprite fireUlt;
     Text upHeT;
     Text upCoT;
     Text upAtT;
+
 
     Text coinsCnt;
     int framenum = 1;
@@ -72,7 +75,7 @@ struct GUI {
     void DrawloadingEffect(RenderWindow& window);
     void setPlayerInfoTexture();
     void setShopTexture();
-
+    void drawUltEffect();
     void drawUpgradeMenu();
     void setMonstersHPTexture();
     void DrawMonsterHP(Vector2f pos, float health, int origHealth, int xdif, int ydif);

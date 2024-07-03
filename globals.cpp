@@ -10,7 +10,7 @@ Clock GameClock;
 View view(Vector2f(0, 0), Vector2f(1920, 1080));
 
 int level = 1;
-int AblazeCharge = 0;
+int AblazeCharge = 100;
 bool AblazeReady = false;
 bool Ablaze = false;
 bool room_cleared = true;
@@ -38,6 +38,7 @@ int damageUpCost = 20;
 int cooldownUpCost = 20;
 int healthUpCost = 20;
 float attackUpCof = 0.1;
+float AblazeDuration = 25;
 float healthUp = 0;
 float cooldownUp = 0;
 float coinsCount=40;

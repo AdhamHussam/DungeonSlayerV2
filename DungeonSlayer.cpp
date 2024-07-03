@@ -47,7 +47,6 @@ float lastX = 0 , lastY = 0;
 float player_scale = 0.2;
 float animation_multiplier = 1;
 float button_lag = 0.2;
-float AblazeDuration = 15;
 int walk_speed = 100;
 int run_speed = 200;
 int cooldown_divider = 1;
@@ -678,6 +677,7 @@ void Draw() {
     window.draw(shadow2);
     window.draw(UpgradeNPC);
     window.draw(TradeNPC);
+    if (Ablaze)gui.drawUltEffect();
     if (!ispassing)window.draw(Player);
     ShowMonsters();       
     if (power_up) {
@@ -1403,7 +1403,8 @@ void set_your_heart_ablaze() {
 
     if (AblazeDuration <= 0) {
         Ablaze = false;
-        AblazeDuration = 10;
+        AblazeDuration = 25;
+        AblazeCharge = 0;
     }
 }
 

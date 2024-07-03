@@ -278,11 +278,13 @@ void GUI::updatePlayerInfo(RenderWindow& window) {
 	armorBar.setTextureRect(IntRect(helath_start - 10, 0,
 		 (float)armor * 1.5 * helath_start / Max_Player_Health, PlayerInfoTexture.getSize().y));
 
-	if (AblazeCharge == 100)ultBar.setTexture(ultBarReadyTexture);
+	if (AblazeCharge == 100 or Ablaze)ultBar.setTexture(ultBarReadyTexture);
 	else ultBar.setTexture(ultBarTexture);
 	ultBarBack.setPosition(ultPosition);
 	ultBar.setPosition(ultPosition.x, ultPosition.y + 30);
-	ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y*AblazeCharge/100.0));
+
+	if(!Ablaze)ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y*AblazeCharge/100.0));
+	else ultBar.setTextureRect(IntRect(0, 0, ultBarTexture.getSize().x, ultBarTexture.getSize().y * AblazeDuration / 25));
 
 	coins.setPosition(coinsPosition.x-180, coinsPosition.y+20);
 	coins.setScale(0.6, 0.6);
@@ -292,6 +294,23 @@ void GUI::updatePlayerInfo(RenderWindow& window) {
 	coinsCnt.setPosition(coinsPosition.x - 270, coinsPosition.y + 80);
 	coinsCnt.setCharacterSize(30);
 
+}
+
+Clock fireUltTimer;
+float fireUltLag = 1.0 / 12;
+int fireUltFrame=0;
+void GUI::drawUltEffect() {
+	if (Ablaze and fireUltTimer.getElapsedTime().asSeconds() > fireUltLag) {
+		
+		fireUltTimer.restart();
+		fireUltFrame++;
+		fireUltFrame %= 12;
+		fireUltTexture.loadFromFile(R"(GUI/fireUlt)" + to_string(fireUltFrame) + R"(.png)");
+		fireUlt.setTexture(fireUltTexture);
+		fireUlt.setScale(4, 4);
+	}
+	fireUlt.setPosition(Player.getPosition().x -150, Player.getPosition().y -120);
+	window.draw(fireUlt);
 }
 
 void GUI::DrawloadingEffect(RenderWindow& window)

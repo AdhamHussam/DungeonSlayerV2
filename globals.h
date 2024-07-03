@@ -37,6 +37,7 @@ extern int Max_Player_Health;
 extern bool ishit;
 extern float cooldown[5];
 extern float damageUp;
+extern float AblazeDuration;
 extern int damageUpCost;
 extern float attackUpCof;
 extern float healthUp;
