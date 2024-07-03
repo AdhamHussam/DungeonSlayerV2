@@ -45,7 +45,7 @@ void FWattack(int x, int y, int i) {
     FWupdateMonFWterAnimationCounter(i);
     if (FWmovmentCounter[i] == 3 && FWmovmentCounter[i] > initial) {
         if (abs(x) < 150 && abs(y) < 30) {
-            Player_Health -= 5;
+            Player_Health -= 10;
             ishit = true;
         }
     }
@@ -74,7 +74,7 @@ void FWdie(int i) {
 
 void FWcreate() {
     FWtexture.loadFromFile("enemies2/Flame_Wizard.png");
-    FWoriginal.health = 15;
+    FWoriginal.health = 20;
     FWoriginal.FW.setTexture(FWtexture);
     FWoriginal.FW.setTextureRect(FWgetRect(0));
     FWoriginal.FW.setOrigin(75, 75);
@@ -154,7 +154,7 @@ void FWdraw(RenderWindow& window) {
         if (FWmonsters[i].alive)
         {
             window.draw(FWmonsters[i].FW);
-            gui.DrawMonsterHP(FWmonsters[i].FW.getPosition(), FWmonsters[i].health, 15, 50, 100);
+            gui.DrawMonsterHP(FWmonsters[i].FW.getPosition(), FWmonsters[i].health, 20, 50, 100);
         }
 }
 

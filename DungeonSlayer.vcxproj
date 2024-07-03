@@ -144,6 +144,7 @@
     <ClCompile Include="Cthulu.cpp" />
     <ClCompile Include="Demon.cpp" />
     <ClCompile Include="DungeonSlayer.cpp" />
+    <ClCompile Include="FireKnight.cpp" />
     <ClCompile Include="FlameWizard.cpp" />
     <ClCompile Include="FrostGuardian.cpp" />
     <ClCompile Include="GameOver.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Cacodaemon.h" />
     <ClInclude Include="cthulu.h" />
     <ClInclude Include="Demon.h" />
+    <ClInclude Include="FireKnight.h" />
     <ClInclude Include="FlameWizard.h" />
     <ClInclude Include="FrostGuardian.h" />
     <ClInclude Include="GameOver.h" />

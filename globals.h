@@ -8,6 +8,7 @@
 #include "Demon.h"
 #include "FlameWizard.h"
 #include "Cacodaemon.h"
+#include "FireKnight.h"
 
 #ifndef GLOBALS_H
 #define GLOBALS_H
@@ -20,7 +21,7 @@ extern View view;
 extern int level;
 extern int AblazeCharge;
 extern bool room_cleared;
-extern int ArcaneArcherNumber, NightBroneNumber, SkeletonNumber, ShardSoulNumber, BrainMoleNumber, RogueNumber, GoblinNumber, CthuluNumber, FrostGuardianNumber, DemonNumber, FlameWizardNumber, CacodaemonNumber;
+extern int ArcaneArcherNumber, NightBroneNumber, SkeletonNumber, ShardSoulNumber, BrainMoleNumber, RogueNumber, GoblinNumber, CthuluNumber, FrostGuardianNumber, DemonNumber, FlameWizardNumber, CacodaemonNumber, FireKnightNumber;
 extern bool Ablaze;
 extern bool AblazeReady;
 extern RenderWindow window;
@@ -57,6 +58,7 @@ extern FrostGuardian FGmonsters[5];
 extern Demon Dmonsters[5];
 extern FlameWizard FWmonsters[30];
 extern Cacodaemon CDmonsters[30];
+extern FireKnight FKmonsters[30];
 extern GUI gui;
 
 extern RectangleShape borderR1;

@@ -45,7 +45,7 @@ void CDattack(int x, int y, int i) {
     CDupdateMonCDterAnimationCounter(i);
     if (CDmovmentCounter[i] == 4 && CDmovmentCounter[i] > initial) {
         if (abs(x) < 150 && abs(y) < 30) {
-            Player_Health -= 5;
+            Player_Health -= 10;
             ishit = true;
         }
     }
