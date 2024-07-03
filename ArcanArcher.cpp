@@ -70,7 +70,7 @@ void AAspawn(int i) {
     AAUpdateMonsterAnimationCounter(i,0.3);
     if (AAMovmentCounter[i] == 4) {
         AAMovmentCounter[i] = 0;
-        AAmonsters[i].power *= 2;
+        AAmonsters[i].power += (AAmonsters[i].power /4);
         AAmonsters[i].health++;
         AAmonsters[i].max_health++;
         AAmonsters[i].ArrowSpeed += 100;
@@ -83,6 +83,7 @@ void AAhurt(int i) {
     AAmonsters[i].AA.setTextureRect(AAgetRect(40 + AAMovmentCounter[i]));
     AAUpdateMonsterAnimationCounter(i);
     if (AAMovmentCounter[i] == 4) {
+        AblazeCharge += 5;
         AAMovmentCounter[i] = 0;
         AAstate[i] = AAenum::AA_walk;
     }

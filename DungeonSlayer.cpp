@@ -120,10 +120,12 @@ Texture trade_npc_idle[11];
 Texture trade_npc_talk[11];
 
 Texture Pscene1;
-Texture Mscene1[4];
+Texture cutscenebg;
+
 
 Sprite Pscene1s;
 Sprite Mscene1s;
+Sprite Cutscenebg;
 
 Sprite UpgradeNPC;
 Sprite TradeNPC;
@@ -142,7 +144,7 @@ Sprite Room;
 Texture pausebg;
 Sprite pausemenu;
 Sprite Map;
-IntRect monsterScene1SA(0, 0, 45, 40);
+IntRect monsterScene1SA(0, 0, 288, 160);
 Texture playerScene1;
 Texture monsterScene1;
 Texture textbox;
@@ -586,8 +588,10 @@ void setTextures() {
     //cutscene
 
     playerScene1.loadFromFile("cutscenePlayer.png");
-    monsterScene1.loadFromFile("enemies/Rogue.png");
+    monsterScene1.loadFromFile("enemies2/demon.png");
     textbox.loadFromFile("textbox.png");
+    cutscenebg.loadFromFile("cutscenebg.png");
+
     
     Skip_text.setFont(game_font);
     Skip_text.setFillColor(Color{ 255,215,0 });
@@ -599,19 +603,19 @@ void setTextures() {
     CutScenetext.setFillColor(Color::Black);
     CutScenetext.setString("I shall show you true TERROR");
     CutScenetext.setCharacterSize(40);
-    CutScenetext.setPosition(775, 420);
+    CutScenetext.setPosition(775, 270);
 
-    textboxSP.setTexture(textbox);
+    Cutscenebg.setTexture(cutscenebg);
+    Cutscenebg.setScale(1.5,1.5);
+
     textboxSM.setTexture(textbox);
-    textboxSP.setScale(0.7, 0.7); 
     textboxSM.setScale(0.7, 0.7);
-    textboxSP.setPosition(-100, 150);
-    textboxSM.setPosition(500, 350);
+    textboxSM.setPosition(500, 200);
     playerScene1S.setTexture(playerScene1);
-    monsterScene1S.setScale(-16, 16);
-    monsterScene1S.setPosition(2000, 465);
-    playerScene1S.setScale(0.4, 0.4);
-    playerScene1S.setPosition(100, 550);
+    monsterScene1S.setScale(6.5, 6.5);
+    monsterScene1S.setPosition(440, 0);
+    playerScene1S.setScale(0.25, 0.25);
+    playerScene1S.setPosition(230, 725);
 
 }
 
@@ -677,7 +681,9 @@ void Draw() {
     window.draw(shadow2);
     window.draw(UpgradeNPC);
     window.draw(TradeNPC);
-    if (Ablaze)gui.drawUltEffect();
+    if (Ablaze) {
+        gui.drawUltEffect(); AblazeCharge = 0;
+    }
     if (!ispassing)window.draw(Player);
     ShowMonsters();       
     if (power_up) {
@@ -691,6 +697,7 @@ void Draw() {
     } 
     if (AblazeReady) {
         set_your_heart_text.setPosition(Player.getPosition().x- 400, Player.getPosition().y - 300);
+
         window.draw(set_your_heart_text);
     }
    /* for (int i = 0; i < doors+1; i++) {
@@ -1422,11 +1429,11 @@ void camera_shake() {
 }
 void cutScene() {
     if (cutscene.getElapsedTime().asSeconds() > 0.2) { 
-        if (monsterScene1SA.left == 150) { 
+        if (monsterScene1SA.left == 1440) { 
             monsterScene1SA.left = 0; 
         }
         else {
-            monsterScene1SA.left += 50; 
+            monsterScene1SA.left += 288; 
         }
         monsterScene1S.setTextureRect(monsterScene1SA); 
         cutscene.restart();  
@@ -1435,6 +1442,7 @@ void cutScene() {
         cutScenePlaying = false;
 
     window.clear(); 
+    window.draw(Cutscenebg);
     window.draw(textboxSM);
     window.draw(Skip_text);
     window.draw(monsterScene1S); 
