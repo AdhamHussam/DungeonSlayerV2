@@ -37,6 +37,7 @@ void Dwalk(int i) {
     Vector2f norm_direction = Direction / magnitude;
     Dmonsters[i].D.move(Vector2f(Direction.x / (float)(abs(Direction.x) + abs(Direction.y)) * Dmonsters[i].speed * Ddeltatime,
         Direction.y / (float)(abs(Direction.x) + abs(Direction.y)) * Dmonsters[i].speed * Ddeltatime));
+    CheckMonsterCollisions(Dmonsters[i].D, norm_direction.x * Dmonsters[i].speed * Ddeltatime, norm_direction.y * Dmonsters[i].speed * Ddeltatime);
     DupdateMonsterAnimationCounter(i);
     DmovementCounter[i] %= 12;
 }

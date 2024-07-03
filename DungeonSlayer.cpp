@@ -1218,7 +1218,7 @@ void music_handler() {
     if (GameMusic.getStatus() != Sound::Playing && !map_opener_trigger) {
         GameMusic.setVolume(5);
         GameMusic.setBuffer(game_music);
-        GameMusic.play();
+        //GameMusic.play();
         map_opener_trigger = true;
     }
 }

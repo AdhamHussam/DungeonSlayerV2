@@ -81,7 +81,7 @@ void MoveMonsters() {
     Gmove(playerdeltatime, Player, attct, Player_Health);
     IVmove(playerdeltatime, Player, attct, Player_Health);
     CMmove(playerdeltatime, Player, attct, Player_Health);
-    room_cleared = true;
+  //  room_cleared = true;
 }
 
 void ShowMonsters() {
